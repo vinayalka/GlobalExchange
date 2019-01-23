@@ -1,0 +1,182 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="ATLANT Blockchain-based global real estate platform built over Ethereum. Trade tokenized property and rent apartments without paying high fees.">
+<meta name=keywords content="ATLANT, ATL, TOKEN, real estate, blockchain, platform"
+<title>
+</title>
+<meta name=mobile-web-app-capable content=yes><meta name=theme-color content=#fff>
+<meta name=application-name content=ATLANT>
+
+<link rel=apple-touch-icon sizes=57x57 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-57x57.png>
+<link rel=apple-touch-icon sizes=60x60 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-60x60.png>
+<link rel=apple-touch-icon sizes=72x72 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-72x72.png>
+<link rel=apple-touch-icon sizes=76x76 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-76x76.png>
+<link rel=apple-touch-icon sizes=114x114 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-114x114.png>
+<link rel=apple-touch-icon sizes=120x120 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-120x120.png>
+<link rel=apple-touch-icon sizes=144x144 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-144x144.png>
+<link rel=apple-touch-icon sizes=152x152 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-152x152.png>
+<link rel=apple-touch-icon sizes=180x180 href=icons-4c420f54941ba2d078baecf758254ef4/apple-touch-icon-180x180.png>
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+<meta name=apple-mobile-web-app-title content=ATLANT>
+<link rel=icon type=image/png sizes=32x32 href=icons-4c420f54941ba2d078baecf758254ef4/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=icons-4c420f54941ba2d078baecf758254ef4/favicon-16x16.png>
+<link rel="shortcut icon" href=icons-4c420f54941ba2d078baecf758254ef4/favicon.ico>
+<link href=static/css/app.a42c8b426fdb35bdf753250f443f1b0f.css rel=stylesheet>
+<link href=static/img>
+
+</head>
+<body background="Changelogo.png">
+
+<div class=preloader>
+<div class=preloader__text></div>
+</div>
+<style>
+.preloader {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #04070e;
+    z-index: 999999999999;
+    opacity: 1;
+    transition: opacity .75s;
+}
+
+.preloader__text {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    display: block;
+    font-weight: 900;
+    font-size: 5vw;
+    letter-spacing: 24.4px;
+    /* color: #464646; */
+    color: #212223;
+}
+
+.preloader__text--scrambled {
+    color: #212223;
+}
+</style>
+<script>var arrText = ['GX', 'IS', 'THE','NEW','FX'];
+var el = document.querySelector(".preloader__text");
+var chars = "\#{>&=<@?}!+]/^__*%[—-\$";
+var step = [];
+var counter = 0;
+
+
+var setText = (newText) => {
+  const oldText = el.innerText;
+  const length = Math.max(oldText.length, newText.length);
+  step = [];
+
+  for (let i = 0; i < length; i++) {
+    const from = oldText[i] || "";
+    const to = newText[i] || "";
+    const start = Math.floor(Math.random() * 30);
+    const end = start + Math.floor(Math.random() * 30);
+    step.push({
+      from,
+      to,
+      start,
+      end
+    });
+  };
+
+  cancelAnimationFrame(this.frameRequest);
+  this.frame = 0;
+  this.update();
+  return new Promise(resolve => (this.resolve = resolve));
+};
+
+var update = () => {
+  let output = "";
+  let complete = 0;
+  for (let i = 0, n = step.length; i < n; i++) {
+    let {
+      from,
+      to,
+      start,
+      end,
+      char
+    } = step[i];
+    if (this.frame >= end) {
+      complete++;
+      output += to;
+    } else if (this.frame >= start) {
+      if (!char || Math.random() < 0.28) {
+        char = this.randomChar();
+        step[i].char = char;
+      }
+      output += `<span class="preloader__text--scrambled">${char}</span>`;
+    } else {
+      output += from;
+    }
+  }
+  el.innerHTML = output;
+  if (complete === step.length) {
+    this.resolve();
+  } else {
+    this.frameRequest = requestAnimationFrame(this.update);
+    this.frame++;
+  }
+};
+
+var randomChar = () => {
+  return this.chars[Math.floor(Math.random() * this.chars.length)];
+};
+
+var nextPhrase = () => {
+  setText(arrText[counter]).then(() => {
+    setTimeout(nextPhrase, 1000)
+  });
+  counter = (counter + 1) % arrText.length;
+};
+
+nextPhrase();
+</script>
+<div id=app>
+</div>
+<script>/**
+ * Google Tag Manager
+ */
+
+(function (w, d, s, l, i) {
+	w[l] = w[l] || [];
+	w[l].push({
+		'gtm.start': new Date().getTime(),
+		event: 'gtm.js'
+	});
+	var f = d.getElementsByTagName(s)[0],
+		j = d.createElement(s),
+		dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true;
+	j.src =
+		'../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-T8FKKSL');</script>
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8FKKSL" height=0 width=0 style=display:none;visibility:hidden></iframe>
+</noscript>
+<script type=text/javascript src=static/js/manifest.2ae2e69a05c33dfc65f8.js>
+</script>
+<script type=text/javascript src=static/js/vendor.47b5e87380f6268f6664.js>
+</script>
+<script type=text/javascript src=static/js/app.0f6272ddad659fd28f4e.js></script>
+
+</body>
+
+</html>

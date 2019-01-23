@@ -1,0 +1,27 @@
+.container1{
+  position: relative;
+    font-size: 42px;
+    /* text-align: left; */
+    left: -76px;
+    letter-spacing: 9px;
+    top: 5px;
+}
+.HeaderText{
+  position: relative;
+    font-size: 17px;
+    top: -280px;
+    left: -33px;
+}
+.HeaderText1{
+  position: relative;
+    font-size: 17px;
+    top: -349px;
+    left: 53px;
+}
+.HeaderText2{
+   position: relative;
+      font-size: 17px;
+      top: -415px;
+      left: 110px;
+      color:#EC0A17;
+}
