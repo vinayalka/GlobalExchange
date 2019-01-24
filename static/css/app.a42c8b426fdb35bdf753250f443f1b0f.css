@@ -69,7 +69,6 @@
 	font-weight: 900;
 	font-size: 16px!important;
 	color: #186AB4;
-	margin-bottom:190px;
 	letter-spacing: 20.8px;
 	text-align: right
 }
@@ -2054,10 +2053,10 @@ h3 {
 }
 
 .menu__linnk {
-	background-image: url(../img/GXTokenBlue.png);
+	background-image: url(../img/GXTokenBluemenu.png);
 	background-repeat: no-repeat;
-	background-position: rightbottom;
-	background-size: 362px 248px;
+	background-position: center;
+	background-size: cover;
 	margin-top: 26px;
 
  background-color:#00bfff;
@@ -2131,4 +2130,9 @@ animation: glow 1s ease-in-out infinite alternate;
 }
 .bg__secondLayout{
 	background-image:url()
+}
+.arrow{
+	position:absolute;
+	color:red;
+	background-color:blue;
 }
