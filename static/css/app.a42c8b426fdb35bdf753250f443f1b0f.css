@@ -377,8 +377,6 @@
 	flex-direction: column;
 	-ms-flex-pack: center;
 	justify-content: center;
-	border:12px solid #117abf;
-	background-color:#186AB4;
 	height: 315px;
 	left: 426px;
     position: relative;
@@ -1108,11 +1106,12 @@ h3 {
 
 .title {
 	font-weight: 900;
-	font-size:30px;
-	color: #ffffff;
+	font-size:60px;
+	color: #0a2d5e;
 	letter-spacing: 8.3px;
 	margin: 0;
 	margin-bottom:36px;
+	text-shadow: -10px 5px 0 #fff;
 
 }
 
@@ -1921,21 +1920,21 @@ h3 {
 }
 
 .slider__titleMobile[data-v-7de95ff2] {
-	font-size: 60px;
+	font-size: 24px;
 	font-weight: 900;
 	letter-spacing: 9.96px;
 	text-align: center;
 	display: block;
 	margin-bottom: 10px;
 	background-size: cover;
-	color: transparent;
+	color: #186AB4;
 	-moz-background-clip: text;
 	-webkit-background-clip: text
 }
 
 .slider__desctiption[data-v-7de95ff2] {
 	font-size: 17px;
-	color: #fff;
+	color: #186AB4;
 	letter-spacing: 1px;
 	text-align: center;
 	line-height: 30px;
