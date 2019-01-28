@@ -371,16 +371,16 @@
 }
 
 .contactUs {
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-ms-flex-pack: center;
-	justify-content: center;
-	height: 315px;
-	left: 426px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 315px;
+    left: 50%;
     position: relative;
-		top: 43px;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .contactUs__bg {
@@ -389,8 +389,8 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: url("../img/ssss.png");
 	background-size: cover;
+	background-position:center;
 	background-repeat: no-repeat;
 	z-index: -1
 }
@@ -1111,13 +1111,13 @@ h3 {
 	letter-spacing: 8.3px;
 	margin: 0;
 	margin-bottom:36px;
-	text-shadow: -10px 5px 0 #fff;
+	text-shadow: -10px 5px 0 #117abf;
 
 }
 
 .text {
 	font-size: 14px;
-	color: #ffffff;
+	color: #0a2d5e;
 	letter-spacing: 1px;
 	line-height:27px;
 	margin: 0;
@@ -1196,8 +1196,8 @@ h3 {
 }
 
 .index__rightBlock {
-	width: 500px;
-	min-width: 500px;
+	width: 120px;
+	min-width: 120px;
 	max-width: 500px;
 	z-index: 1
 }
