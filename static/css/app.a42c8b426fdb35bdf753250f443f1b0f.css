@@ -1926,9 +1926,10 @@ h3 {
 	letter-spacing: 9.96px;
 	text-align: center;
 	display: block;
+	/* color:transparent; */
+	color: #186AB4;
 	margin-bottom: 10px;
 	background-size: cover;
-	color: #186AB4;
 	-moz-background-clip: text;
 	-webkit-background-clip: text
 }
@@ -2011,7 +2012,7 @@ h3 {
 	letter-spacing: 24.4px;
 	line-height: 11vh;
 	text-transform: uppercase;
-	color: #186AB4
+	color: #186AB4;
 }
 
 .desc__transition-enter-active,
